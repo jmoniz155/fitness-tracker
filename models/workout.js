@@ -4,19 +4,48 @@ const { Schema } = mongoose;
 
 const workoutSchema = new Schema({
     // look at seed.js for whats needed //
-  name: {
-    type: String,
-    trim: true,
-    required: 'Enter a name for transaction',
-  },
-  value: {
-    type: Number,
-    required: 'Enter an amount',
-  },
-  date: {
+  day: {
     type: Date,
     default: Date.now,
+    required: true,
   },
+  excercises: [ 
+    {
+        excerciseType: {
+            type: string,
+            required: true
+        },
+        name: {
+            type: string,
+            required: true
+        },
+        duration: {
+            type: number,
+            min: 0,
+            required: true
+        },
+        weight: {
+            type: number,
+            min: 0,
+            max: 500,
+        },
+        reps: {
+            type: number,
+            min: 0,
+        },
+        sets: {
+            type: number,
+            min: 0
+        }
+
+    
+    
+    
+    
+    
+    
+    }
+]
 });
 
 const Workout = mongoose.model('Workout', workOutSchema);
