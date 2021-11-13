@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-
+// create database
 const workoutSchema = new Schema({
     // look at seed.js for whats needed //
     day: {
