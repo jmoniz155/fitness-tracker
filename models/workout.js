@@ -14,7 +14,7 @@ const workoutSchema = new Schema({
         excerciseType: {
             type: String,
             required: true,
-            enum: ["weights", "cardio"]
+            enum: ["resistance", "cardio"]
         },
         name: {
             type: String,
@@ -38,7 +38,7 @@ const workoutSchema = new Schema({
             type: number,
             min: 0
         },
-        duration: {
+        distance: {
             type: number,
             min: 0
         }
