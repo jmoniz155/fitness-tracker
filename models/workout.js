@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
 const workoutSchema = new Schema({
     // look at seed.js for whats needed //
-  day: {
+    day: {
     type: Date,
     default: Date.now,
     required: true,
@@ -12,11 +12,12 @@ const workoutSchema = new Schema({
   excercises: [ 
     {
         excerciseType: {
-            type: string,
-            required: true
+            type: String,
+            required: true,
+            enum: ["weights", "cardio"]
         },
         name: {
-            type: string,
+            type: String,
             required: true
         },
         duration: {
@@ -36,16 +37,13 @@ const workoutSchema = new Schema({
         sets: {
             type: number,
             min: 0
+        },
+        duration: {
+            type: number,
+            min: 0
         }
-
-    
-    
-    
-    
-    
-    
     }
-]
+  ]
 });
 
 const Workout = mongoose.model('Workout', workOutSchema);
