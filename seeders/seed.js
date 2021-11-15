@@ -17,7 +17,7 @@ const workoutSeed = [
         duration: 20,
         weight: 100,
         reps: 10,
-        sets: 4,
+        sets: 4
       },
     ],
   },
@@ -30,7 +30,7 @@ const workoutSeed = [
         duration: 20,
         weight: 300,
         reps: 10,
-        sets: 4,
+        sets: 4
       },
     ],
   },
@@ -43,7 +43,7 @@ const workoutSeed = [
         duration: 25,
         weight: 185,
         reps: 8,
-        sets: 4,
+        sets: 4
       },
     ],
   },
@@ -54,7 +54,7 @@ const workoutSeed = [
         type: 'cardio',
         name: 'Running',
         duration: 25,
-        distance: 4,
+        distance: 4
       },
     ],
   },
@@ -67,7 +67,7 @@ const workoutSeed = [
         duration: 20,
         weight: 285,
         reps: 10,
-        sets: 4,
+        sets: 4
       },
     ],
   },
@@ -80,7 +80,7 @@ const workoutSeed = [
         duration: 20,
         weight: 300,
         reps: 10,
-        sets: 4,
+        sets: 4
       },
     ],
   },
@@ -93,7 +93,7 @@ const workoutSeed = [
         duration: 30,
         weight: 300,
         reps: 10,
-        sets: 4,
+        sets: 4
       },
     ],
   },
@@ -106,7 +106,7 @@ const workoutSeed = [
         duration: 20,
         weight: 300,
         reps: 10,
-        sets: 4,
+        sets: 4
       },
     ],
   },
@@ -119,7 +119,7 @@ const workoutSeed = [
         duration: 20,
         weight: 300,
         reps: 10,
-        sets: 4,
+        sets: 4
       },
     ],
   },
