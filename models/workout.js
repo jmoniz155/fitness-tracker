@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const { Schema } = mongoose;
+const  Schema  = mongoose.Schema;
 // create database
 const workoutSchema = new Schema({
     // look at seed.js for whats needed //
@@ -21,31 +21,30 @@ const workoutSchema = new Schema({
             required: true
         },
         duration: {
-            type: number,
-            min: 0,
-            required: true
+            type: Number,
+            min: 0
         },
         weight: {
-            type: number,
+            type: Number,
             min: 0,
-            max: 500,
+            max: 500
         },
         reps: {
-            type: number,
+            type: Number,
             min: 0,
         },
         sets: {
-            type: number,
+            type: Number,
             min: 0
         },
         distance: {
-            type: number,
+            type: Number,
             min: 0
         }
     }
   ]
 });
 
-const Workout = mongoose.model('Workout', workOutSchema);
+const Workout = mongoose.model('Workout', workoutSchema);
 
 module.exports = Workout;

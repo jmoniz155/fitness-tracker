@@ -11,7 +11,7 @@ function calculateTotalWeight(data) {
 
     totals.push(workoutTotal);
   });
-
+console.log(totals);
   return totals;
 }
 
