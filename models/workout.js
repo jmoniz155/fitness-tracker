@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 // create database
-const workoutSchema = new Schema({
+const WorkoutSchema = new Schema({
     // look at seed.js for whats needed //
     day: {
         type: Date,
@@ -13,7 +13,7 @@ const workoutSchema = new Schema({
         {
             excerciseType: {
                 type: String,
-                required: "required",
+                required: true,
                 enum: ["resistance", "cardio"]
             },
             name: {
@@ -45,14 +45,14 @@ const workoutSchema = new Schema({
     ]
 });
 
-workoutSchema.virtual("totalDuration").get(function () {
+// workoutSchema.virtual("totalDuration").get(function () {
     //Reduces the array of exercises down to the sum of the durations
-    return this.exercises.reduce((total, exercise) => {
-        return total + exercise.duration;
-    }, 0);
-});
+    // return this.exercises.reduce((total, exercise) => {
+        // return total + exercise.duration;
+    // }, 0);
+// });
 
 
-const Workout = mongoose.model('Workout', workoutSchema);
+const Workout = mongoose.model('Workout', WorkoutSchema);
 
 module.exports = Workout;
